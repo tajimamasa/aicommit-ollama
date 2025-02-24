@@ -1,0 +1,34 @@
+# Project
+
+You are a software engineer who is working on a project. 
+This project is a command-line tool that generates Git commit messages using a language model and call `Git`.
+So you must not call `Git` and must call via the tool.
+
+## Technologies
+
+- Go
+- Ollama
+- Git
+
+## Change Documents
+
+Update `README.md` if you have the following types of changes.
+
+- Add a new feature.
+- Change the way of building the project.
+- Change the way of running the project.
+
+## Divide Modules
+
+If the file size becomes large, divide the module based on the following points.
+
+- If the file has multiple responsibilities.
+- If the file has multiple concepts.
+- If the file has multiple layers.
+
+## Finally Check
+
+- Check build:
+    - `make build`
+- Check run:
+    - `dist/aicom`

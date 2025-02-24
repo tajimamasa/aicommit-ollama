@@ -37,7 +37,7 @@ If the file size becomes large, divide the module based on the following points.
 
 If the user wants a pull request, follow it. However, make sure you can run [Finally Check](#finally-check).
 
-- `git diff origin/main --no-pager` to check the current status of the difference before creating a pull request.
+- `git --no-pager diff origin/main` to check the current status of the difference before creating a pull request.
 - The branch name starts with `feature/` or `fix/`.
 - Write the content of the pull request in Japanese.
 - The content of the pull request includes the following items.

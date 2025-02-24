@@ -14,5 +14,8 @@ install:
 uninstall:
 	rm $(GOPATH)/bin/$(APP_NAME)
 
+test:
+	go test ./src/...
+
 clean:
 	rm -rf $(DIST_DIR)

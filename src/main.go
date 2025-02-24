@@ -7,11 +7,18 @@ import (
 )
 
 func main() {
-	message := flag.String("ollamaHost", "http://localhost:11434/", "Ollama host")
+	host := flag.String("ollamaHost", "http://localhost:11434/", "Ollama host")
 	model := flag.String("ollamaModel", "llama3.2:latest", "Ollama model")
 	flag.Parse()
-	fmt.Println("Ollama Host: " + *message)
-	fmt.Println("Ollama Model: " + *model)
+	fmt.Println("🌐 Ollama Host: " + *host)
+	fmt.Println("🤖 Ollama Model: " + *model)
+
+	version, err := checkOllamaVersion(*host)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	fmt.Println("🛠️ Ollama Version:", version)
 
 	// Execute the command to get the current branch name
 	branchCmd := exec.Command("git", "rev-parse", "--abbrev-ref", "HEAD")
@@ -22,7 +29,7 @@ func main() {
 	}
 
 	// Print the current branch name
-	fmt.Println("Current Branch: " + string(branchOutput))
+	fmt.Println("🌿 Current Branch: " + string(branchOutput))
 
 	// Execute the git diff command
 	cmd := exec.Command("git", "diff", "--name-status")

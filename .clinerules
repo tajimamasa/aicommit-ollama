@@ -28,6 +28,8 @@ If the file size becomes large, divide the module based on the following points.
 
 ## Finally Check
 
+- Check test:
+    - `make test`
 - Check build:
     - `make build`
 - Check run:
@@ -39,8 +41,8 @@ If the user wants a pull request, follow it. However, make sure you can run [Fin
 
 - `git --no-pager diff origin/main` to check the current status of the difference before creating a pull request.
 - The branch name starts with `feature/` or `fix/`.
-- Write the content of the pull request in Japanese.
-- The content of the pull request includes the following items.
+- Write the title and body of the pull request in Japanese.
+- The body of the pull request includes the following items.
     - What did you do?
     - Why did you do that?
     - How did you do that?
